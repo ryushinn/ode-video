@@ -119,10 +119,10 @@ To sample the trained models, you can use:
 #   <batchsize>  : the batch size in sampling
 #   <n_frames>   : the number of frames in each sample
 
-bash scripts/sample_videoflow.sh data/sky_timelapse/sky_test experiments_weights/sky experiments_inference/sky 128 128 32 512
+bash scripts/sample_videoflow.sh data/sky_timelapse/sky_test experiments_weights/sky experiments_inference/sky 128 64 8 32
 ```
 
-The above command samples 128 videos, each of which has 512 frames. The sampling script will sample `condiff` and `flow`, together with `bi-flow` under four different levels of inference noises.
+The above command generates 64 videos, each of which has 32 frames. The sampling script will sample `condiff` and `flow`, together with `bi-flow` under four different levels of inference noises.
 
 ## Citation
 
