@@ -1,0 +1,40 @@
+seed: 42
+checkpoints_path:
+
+model:
+  config: ???
+  weights_path:
+
+branch:
+  name:
+
+training:
+  lr: 1e-4
+  batchsize: 32
+  n_iter: 200_000
+  accumulation_steps: 1
+
+inference:
+  batchsize: 8
+  n_frames: 64
+  n_samples: ${batchsize}
+  solver:
+    name: "torchode.Heun"
+    atol: 1e-2
+    rtol: 1e-2
+    dt0: null
+  noise_level: 0.0
+  image_size: ${data.image_size}
+  backward: false
+
+data:
+  path: ???
+  n_frames:
+  image_size:
+    - 128
+    - 128
+
+log:
+  exp_path: experiments_test
+  n_checkpoints: 10
+  comment:
