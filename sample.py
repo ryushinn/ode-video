@@ -79,6 +79,7 @@ def main():
 
     # === inference function ===
     sample_func = partial(sample, solver=cfg.inference.solver)
+    sample_func = torch.compile(sample_func)
 
     # === training loop ===
     data_test_iterator = iter(dataloader_test)

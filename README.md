@@ -94,7 +94,7 @@ In case you want to modify, please use `accelerate config`.
 #       but allow you to use a large batch size in limited GPU memory
 #       by performing one optimizer step after several backward passes
 
-bash scripts/train_videoflow.sh data/sky_timelapse/sky_train experiments_weights/sky 128 1 8
+bash scripts/train_videoflow.sh data/sky_timelapse/sky_train experiments_weights/sky 128 1 4
 ```
 
 Above is an example to train `condiff`, `flow`, and `bi-flow` for the dataset `sky`.
@@ -119,10 +119,10 @@ To sample the trained models, you can use:
 #   <batchsize>  : the batch size in sampling
 #   <n_frames>   : the number of frames in each sample
 
-bash scripts/sample_videoflow.sh data/sky_timelapse/sky_test experiments_weights/sky experiments_inference/sky 128 8 1 32
+bash scripts/sample_videoflow.sh data/sky_timelapse/sky_test experiments_weights/sky experiments_inference/sky 128 128 32 512
 ```
 
-The above command samples 8 videos, each of which has 32 frames. The sampling script will sample `condiff` and `flow`, together with `bi-flow` under four different levels of inference noises.
+The above command samples 128 videos, each of which has 512 frames. The sampling script will sample `condiff` and `flow`, together with `bi-flow` under four different levels of inference noises.
 
 ## Citation
 
