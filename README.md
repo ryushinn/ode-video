@@ -77,6 +77,10 @@ rm checkpoints_ode-video.zip
 
 ### Training (from scratch)
 
+We use Huggingface [accelerate](https://github.com/huggingface/accelerate) to setup gradient accumulation and mixed precision training.
+The default arguments are already specified in the script.
+In case you want to modify, please use `accelerate config`.
+
 ```bash
 # USAGE:
 #   train_videoflow.sh <data_path> <exp_path> <image_size> <num_processes> <accumulation_steps>
