@@ -8,6 +8,8 @@
 
 This repo provides the official implementation of our paper in PyTorch.
 
+We have also provided a compact [pseudocode](https://ryushinn.github.io/ode-video#method) that shows the core logic of our `bi-flow` algorithm, without bogging you down in all the less relevant code files.
+
 ## Setup
 
 ### Install
@@ -125,6 +127,8 @@ bash scripts/sample_videoflow.sh data/sky_timelapse/sky_test experiments_weights
 The above command generates 64 videos, each of which has 32 frames. The sampling script will sample `condiff` and `flow`, together with `bi-flow` under four different levels of inference noises.
 
 ## Citation
+
+If you find this useful or adopt (parts of) our project, please cite our paper:
 
 ```bibtex
 @article{liu2025generative,
