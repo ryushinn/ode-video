@@ -131,10 +131,11 @@ The above command generates 64 videos, each of which has 32 frames. The sampling
 If you find this useful or adopt (parts of) our project, please cite our paper:
 
 ```bibtex
-@article{liu2025generative,
+@inproceedings{liu2025generative,
   title={Generative Video Bi-flow},
   author={Liu, Chen and Ritschel, Tobias},
-  journal={arXiv preprint arXiv:2503.06364},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages={19363--19372},
   year={2025}
 }
 ```
